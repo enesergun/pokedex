@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,78 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        normal: {
+          DEFAULT: "#A8A77A",
+          foreground: "",
+        },
+        fire: {
+          DEFAULT: "#EE8130",
+          foreground: "",
+        },
+        water: {
+          DEFAULT: "#6390F0",
+          foreground: "",
+        },
+        electric: {
+          DEFAULT: "#F7D02C",
+          foreground: "",
+        },
+        grass: {
+          DEFAULT: "#7AC74C",
+          foreground: "",
+        },
+        ice: {
+          DEFAULT: "#96D9D6",
+          foreground: "",
+        },
+        fighting: {
+          DEFAULT: "#C22E28",
+          foreground: "",
+        },
+        poison: {
+          DEFAULT: "#A33EA1",
+          foreground: "",
+        },
+        ground: {
+          DEFAULT: "#E2BF65",
+          foreground: "",
+        },
+        flying: {
+          DEFAULT: "#A98FF3",
+          foreground: "",
+        },
+        psychic: {
+          DEFAULT: "#F95587",
+          foreground: "",
+        },
+        bug: {
+          DEFAULT: "#A6B91A",
+          foreground: "",
+        },
+        rock: {
+          DEFAULT: "#B6A136",
+          foreground: "",
+        },
+        ghost: {
+          DEFAULT: "#735797",
+          foreground: "",
+        },
+        dragon: {
+          DEFAULT: "#6F35FC",
+          foreground: "white",
+        },
+        dark: {
+          DEFAULT: "#705746",
+          foreground: "",
+        },
+        steel: {
+          DEFAULT: "#B7B7CE",
+          foreground: "",
+        },
+        fairy: {
+          DEFAULT: "#D685AD",
+          foreground: "",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -75,6 +147,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
