@@ -7,28 +7,28 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 
-export default function PokeCard() {
+export type PokeCardPropTypes = {
+  name: string;
+  order: number;
+};
+
+export default function PokeCard({ name, order }: Readonly<PokeCardPropTypes>) {
   return (
-    <Card>
+    <Card className="min-h-56">
       <CardHeader className="pb-0">
-        <CardTitle>Bulbasaur</CardTitle>
-        <CardDescription>#0001</CardDescription>
+        <CardTitle>{name}</CardTitle>
+        <CardDescription>#{order}</CardDescription>
       </CardHeader>
       <CardContent className="p-0">
         <Image
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL! + order + ".svg"}
           alt="bulbasaur"
-          width={150}
-          height={150}
+          width={100}
+          height={100}
           className="mx-auto"
         />
       </CardContent>
-      <CardFooter className="flex-wrap gap-1">
-        <Badge variant="fairy">Badge</Badge>
-        <Badge variant="fairy">Badge</Badge>
-      </CardFooter>
     </Card>
   );
 }

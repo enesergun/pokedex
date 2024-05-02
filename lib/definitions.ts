@@ -67,3 +67,10 @@ export enum PokemonTypes {
   STEEL = "steel",
   FAIRY = "fairy",
 }
+export type PokeListPropTypes = {
+  data: PokemonListElementTypes[];
+};
+export type PokemonListElementTypes = {
+  id: number;
+  name: string;
+};

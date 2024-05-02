@@ -1,58 +1,20 @@
 import Link from "next/link";
 import PokeCard from "./poke-card";
-export default function PokeList() {
+import { PokeListPropTypes, PokemonListElementTypes } from "@/lib/definitions";
+
+export default function PokeList({ data }: Readonly<PokeListPropTypes>) {
   return (
     <ul className="flex flex-wrap gap-5">
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/5">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/6">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/7">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/8">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%] 2xl:w-[22%]">
-        <Link href="pokemon-detail/3">
-          <PokeCard />
-        </Link>
-      </li>
+      {data?.map((pokemon: PokemonListElementTypes, index: number) => (
+        <li
+          key={`data_${pokemon.id}`}
+          className="w-full sm:w-[48%] lg:w-[30%] "
+        >
+          <Link href={`pokemon-detail/${pokemon.name}`}>
+            <PokeCard name={pokemon.name} order={index + 1} />
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }
