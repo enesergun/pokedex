@@ -6,10 +6,10 @@ import { fetchPokemons } from "@/lib/data";
 export default async function PokeList() {
   const data = await fetchPokemons(0);
   return (
-    <ul className="flex flex-wrap gap-5">
+    <ul className="flex flex-wrap gap-5 my-6">
       {data?.results?.map((pokemon: PokemonListElementTypes, index: number) => (
         <li
-          key={`data_${pokemon.id}`}
+          key={`data_${pokemon.name}`}
           className="w-full sm:w-[48%] lg:w-[30%] "
         >
           <Link href={`pokemon-detail/${pokemon.name}`}>

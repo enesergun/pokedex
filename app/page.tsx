@@ -10,12 +10,13 @@ export default function Home() {
     <main>
       <Image
         src="/pokemon-logo.png"
-        width={350}
-        height={200}
+        width={275}
+        height={75}
         alt="Pokemon Logo"
         className="mx-auto"
+        loading="lazy"
       />
-      <PokeSearch />
+      {/* <PokeSearch /> */}
       <Suspense fallback={<PokeListSkeleton />}>
         <PokeList />
       </Suspense>

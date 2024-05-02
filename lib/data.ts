@@ -11,10 +11,10 @@ export async function fetchPokemons(page: number) {
     throw error;
   }
 }
-export async function fetchSinglePokemon(name: string) {
+export async function fetchSinglePokemon(slug: string) {
   try {
     const response = await axios.get(
-      process.env.NEXT_PUBLIC_BASE_URL + "pokemon/" + name
+      process.env.NEXT_PUBLIC_BASE_URL + "pokemon/" + slug
     );
 
     return response.data;
