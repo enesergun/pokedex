@@ -1,12 +1,11 @@
 import PokeList from "@/components/list/poke-list";
 import PokeSearch from "@/components/list/poke-search";
 import PaginationWrapper from "@/components/shared/pagination-wrapper";
-import { fetchPokemons } from "@/lib/data";
+import PokeListSkeleton from "@/components/shared/skeletons";
 import Image from "next/image";
+import { Suspense } from "react";
 
-export default async function Home() {
-  const data = await fetchPokemons(0);
-
+export default function Home() {
   return (
     <main>
       <Image
@@ -17,7 +16,9 @@ export default async function Home() {
         className="mx-auto"
       />
       <PokeSearch />
-      <PokeList data={data?.results} />
+      <Suspense fallback={<PokeListSkeleton />}>
+        <PokeList />
+      </Suspense>
       <PaginationWrapper />
     </main>
   );
