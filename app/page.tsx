@@ -14,7 +14,7 @@ export default function Home() {
         height={75}
         alt="Pokemon Logo"
         className="mx-auto"
-        loading="lazy"
+        priority
       />
       {/* <PokeSearch /> */}
       <Suspense fallback={<PokeListSkeleton />}>
