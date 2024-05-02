@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Image
-        src="/pokemon-logo.png"
+        src="/pokemon-logo.webp"
         width={275}
         height={75}
         alt="Pokemon Logo"
