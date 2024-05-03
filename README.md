@@ -75,4 +75,4 @@ Core Web Vitals (LCP, FID, CLS) are key metrics assessing webpage loading speed,
 
 ## 📞 Get Feedback
 
-You can contact me via enesergun1515@gmail.com or through <a href="https://www.linkedin.com/in/enesergun/" >LinkedInd</a> to provide feedback on the project.
+You can contact me via enesergun1515@gmail.com or through <a href="https://www.linkedin.com/in/enesergun/" >LinkedIn</a> to provide feedback on the project.
