@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import DetailContent from "@/components/detail/detail-content";
-import { ArrowLeft } from "lucide-react";
 import { fetchSinglePokemon } from "@/lib/data";
 import type { Metadata, ResolvingMetadata } from "next";
+import Back from "@/components/detail/back";
 import { capitalizeFirstLetter } from "@/lib/utils";
 type Props = {
   params: { slug: string };
@@ -37,9 +36,7 @@ export default async function PokemonDetail({
 
   return (
     <main>
-      <Link href="/" aria-label="Back">
-        <ArrowLeft />
-      </Link>
+      <Back />
       <Image
         src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + data?.id + ".png"}
         alt="Pokemon Image"
