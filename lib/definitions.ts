@@ -145,6 +145,6 @@ export type PokeListPropTypes = {
   data: PokemonListElementTypes[];
 };
 export type PokemonListElementTypes = {
-  id: number;
   name: string;
+  url: string;
 };

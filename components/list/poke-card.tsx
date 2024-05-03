@@ -22,8 +22,10 @@ export default function PokeCard({ name, order }: Readonly<PokeCardPropTypes>) {
       </CardHeader>
       <CardContent className="p-0">
         <Image
-          src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL! + order + ".svg"}
-          alt="bulbasaur"
+          src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL! + order + ".png"}
+          alt="Pokemon Image"
+          placeholder="empty"
+          blurDataURL="/pokeball.webp"
           width={100}
           height={100}
           className="mx-auto"

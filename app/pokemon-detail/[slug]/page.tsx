@@ -37,16 +37,18 @@ export default async function PokemonDetail({
 
   return (
     <main>
-      <Link href="/">
+      <Link href="/" aria-label="Back">
         <ArrowLeft />
       </Link>
       <Image
-        src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + data?.id + ".svg"}
-        alt="bulbasaur"
+        src={process.env.NEXT_PUBLIC_IMAGE_BASE_URL + data?.id + ".png"}
+        alt="Pokemon Image"
         width={125}
         height={125}
+        placeholder="empty"
+        blurDataURL="/pokeball.webp"
         className="mx-auto"
-        loading="lazy"
+        priority
       />
       <DetailContent data={data} />
     </main>

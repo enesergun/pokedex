@@ -15,39 +15,58 @@ function PokeCardSkeleton() {
     </div>
   );
 }
-export default function PokeListSkeleton() {
+export function PaginationSkeleton() {
   return (
-    <ul className="flex flex-wrap gap-5">
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-      <li className="w-full sm:w-[48%] lg:w-[30%]">
-        <PokeCardSkeleton />
-      </li>
-    </ul>
+    <div className="w-[311px] h-[40px] mx-auto flex">
+      <div>
+        <Skeleton className="h-[40px] w-[103px]" />
+      </div>
+      <div>
+        <Skeleton className="h-[40px] w-[116px]" />
+      </div>
+      <div>
+        <Skeleton className="h-[40px] w-[103px]" />
+      </div>
+    </div>
+  );
+}
+
+export function PokeListSkeleton() {
+  return (
+    <>
+      <ul className="flex flex-wrap gap-5 my-6">
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+        <li className="w-full sm:w-[48%] lg:w-[30%]">
+          <PokeCardSkeleton />
+        </li>
+      </ul>
+      <PaginationSkeleton />
+    </>
   );
 }

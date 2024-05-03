@@ -31,7 +31,7 @@ function DataItem({
     <div className="flex my-2">
       <span className="min-w-[60%] font-bold">{title}</span>
       {!progress && <span>{value}</span>}
-      {progress && <Progress value={progress} />}
+      {progress && <Progress value={progress} aria-label={title} />}
     </div>
   );
 }

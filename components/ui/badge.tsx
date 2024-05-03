@@ -22,7 +22,7 @@ const badgeVariants = cva(
         electric:
           "border-transparent bg-electric text-primary-foreground hover:bg-electric/80",
         grass:
-          "border-transparent bg-grass text-primary-foreground hover:bg-grass/80",
+          "border-transparent bg-grass text-secondary-foreground hover:bg-grass/80",
         ice: "border-transparent bg-ice text-primary-foreground hover:bg-ice/80",
         fighting:
           "border-transparent bg-fighting text-primary-foreground hover:bg-fighting/80",
