@@ -40,7 +40,11 @@ export default function PaginationWrapper({
     if (startPage > 1) {
       pageNumbers.push(
         <PaginationItem key="data_1">
-          <PaginationLink href={createPageURL(1)} isActive={currentPage === 1}>
+          <PaginationLink
+            className="h-8 w-8"
+            href={createPageURL(1)}
+            isActive={currentPage === 1}
+          >
             1
           </PaginationLink>
         </PaginationItem>
@@ -60,6 +64,7 @@ export default function PaginationWrapper({
         pageNumbers.push(
           <PaginationItem key={`data_${i}`}>
             <PaginationLink
+              className="h-8 w-8"
               href={createPageURL(i)}
               isActive={currentPage === i}
             >
@@ -82,6 +87,7 @@ export default function PaginationWrapper({
     pageNumbers.push(
       <PaginationItem key={`data_${count}`}>
         <PaginationLink
+          className="h-8 w-8"
           href={createPageURL(count)}
           isActive={currentPage === count}
         >
@@ -93,7 +99,7 @@ export default function PaginationWrapper({
     return pageNumbers;
   };
   return (
-    <Pagination>
+    <Pagination className="py-3">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious
